@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --padding: 1.2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+}
+
+.appbar {
+  height: 8vh;
+  width: 100vw;
+  border-bottom: 1px solid #dadce0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: var(--padding);
+  box-sizing: border-box;
+}
+.branding {
+  font-size: 1.5rem;
+  color: #134563;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 1rem;
+  padding: var(--padding);
+  align-items: flex-start;
+}
+.taskContainer {
+  border: 1px solid #dadce0;
+  border-radius: 0.5rem;
+  padding: var(--padding);
+  width: 33.33%;
+}
+.taskContainer p:first-of-type {
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+
+.taskContainer p:not(:first-of-type)::before {
+  content: "• ";
+  margin-right: 5px;
+  padding-top: 2rem;
+}
+
+.taskContainer p:active {
+  transform: scale(1.05);
+  opacity: 0.9;
+  border-radius: 0.4rem;
+  border: 1px solid #dadce0;
+  padding: 0.2rem;
+  background-color: rgb(254, 254, 154);
+}
+
+.hovered {
+  background-color: rgb(212, 255, 214);
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .taskContainer {
+    width: 100%;
+  }
+}
+
+.input-box {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  border: none;
+  outline: none;
+  padding: var(--padding);
+  border-radius: 0.8rem;
+  background-color: #fff;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* input::placeholder {
+  color: #134563
+} */
+
+select {
+  all: unset;
+  border: none;
+  border: 1px solid #dadce0;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+}
+
+select:hover {
+  background-color: rgb(216, 255, 202);
+}
